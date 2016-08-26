@@ -1,6 +1,6 @@
 {
   "name": "tox-bootstrap-electron",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Just a customized (twitter) bootstrap for electron apps",
   "author": "Enrico Hoffmann <dasrick@gmail.com>",
   "license": "MIT",
