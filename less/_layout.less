@@ -1,0 +1,48 @@
+// =====================================================================================================================
+// Layout
+// =====================================================================================================================
+// !!! Only define height and width ... otherwise you will notice that broken fingers let you hack a little bit slower
+// ---------------------------------------------------------------------------------------------------------------------
+html, body {
+  height: 100%;
+}
+
+header,
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  > .container {
+    display: flex;
+    aside {
+      display: inline-block;
+      margin: 0;
+      &.left {
+        margin-right: auto;
+      }
+      &.right {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+header {
+  height: @header-height;
+  top: 0;
+}
+
+main {
+  min-height: calc(~"100vh - @{header-height} - @{footer-height}");
+  padding-top: @header-height;
+  padding-bottom: @footer-height;
+}
+
+footer {
+  height: @footer-height;
+  bottom: 0;
+}
+
+.list-inline {
+  display: inline-block;
+}

@@ -46,15 +46,6 @@ module.exports = function (grunt) {
         ext: '.min.css'
       }
     },
-    lesslint: {
-      src: ['less/*.less'],
-      options: {
-        csslint: {
-          'known-properties': true,
-          csslintrc: '.csslintrc'
-        }
-      }
-    },
     copy: {
       'bootstrap-font': {
         expand: true,
@@ -67,7 +58,6 @@ module.exports = function (grunt) {
     }
   });
   // register and combine all grunt tasks
-  grunt.registerTask('default', ['test', 'clean', 'copy', 'buildcss']);
+  grunt.registerTask('default', ['clean', 'copy', 'buildcss']);
   grunt.registerTask('buildcss', ['less', 'autoprefixer', 'cssmin']);
-  grunt.registerTask('test', ['lesslint']);
 };
